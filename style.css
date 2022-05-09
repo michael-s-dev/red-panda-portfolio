@@ -1,0 +1,291 @@
+body,
+html {
+  margin: 0 auto;
+  width: 100%;
+  background: #151518;
+  font-family: "Raleway";
+  color: #d2d2d6;
+  max-width: 1800px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tags {
+  pointer-events: none;
+  margin-top: auto;
+}
+span {
+  padding: 5px 10px;
+  background: rgb(139, 22, 22);
+  margin: 3px;
+  display: inline-block;
+  font-size: 0.7em;
+  transition: ease-in-out 0.3s all;
+  pointer-events: all;
+}
+
+small {
+  color: #777;
+}
+
+.tags span:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.tags:hover > span:not(:hover) {
+  opacity: 0.2;
+  transform: scale(0.9);
+}
+
+nav {
+  width: 270px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #121215;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.main {
+  margin-left: 270px;
+  padding: 0 25px;
+}
+
+nav ul {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  list-style-type: none;
+  line-height: 40px;
+  margin-left: -25px;
+  margin-top: 30px;
+  max-width: 100%;
+}
+
+.top {
+  margin-left: 24px;
+}
+
+.top img {
+  width: 180px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.menu li {
+  margin-left: -20px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+li.active {
+  color: #00a170;
+}
+
+li:last-child {
+  margin-bottom: 10px;
+}
+
+.menu li:hover {
+  background: #0072b5;
+  color: inherit;
+}
+h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 15px 0 7px 0;
+}
+
+h2,
+h3 {
+  font-size: 36px;
+  line-height: 2em;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    14deg,
+    rgb(63, 87, 61) 0%,
+    rgba(0, 161, 112, 1) 45%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 273px;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 5px 0;
+}
+nav p {
+  color: #ccc;
+  font-style: 12px;
+}
+
+.btn {
+  padding: 7px 12px;
+  background: #191919;
+  text-decoration: none;
+  color: #eee;
+  margin: 0 0.1em;
+  font-size: 0.9em;
+}
+
+.btn:hover {
+  color: #00a170;
+}
+
+.btn:first-child {
+  margin-left: 15px;
+  color: #06202c;
+  font-weight: 700;
+  background: linear-gradient(
+    14deg,
+    rgb(63, 87, 61) 0%,
+    rgba(0, 161, 112, 1) 45%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+hr {
+  max-width: 99%;
+  color: transparent;
+  height: 0.5em;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(63, 87, 61) 0%,
+    rgba(0, 161, 112, 1) 49%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  margin-top: 30px;
+  border: none;
+  border-top-left-radius: 19px;
+}
+
+.gallery {
+  margin: 20px 15px;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.resIMG {
+  width: 450px;
+  margin-bottom: 12px;
+  background: #121215;
+  margin: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: none;
+  font-size: 0;
+}
+
+.decs,
+.tags {
+  padding: 5px 25px;
+}
+
+.main i,
+.menu i {
+  margin-right: 12px;
+}
+
+.socicons {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+.socicons li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.socicons li:hover {
+  color: #00a170;
+}
+
+footer {
+  margin-left: 270px;
+  width: 78%;
+  height: 200px;
+  display: block;
+  padding: 40px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+}
+
+footer p {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+}
+h2 > i {
+  display: none !important;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .gallery {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .resIMG {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h2 {
+    max-width: none;
+  }
+  h2 > i {
+    display: inline !important;
+  }
+  nav {
+    display: none;
+    opacity: 96%;
+  }
+  .main,
+  footer {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .gallery {
+    padding: 0;
+  }
+  .main {
+    padding: 0 13px;
+  }
+  .btn:first-child {
+    margin-left: 0;
+    margin-top: 10px;
+    background: #191919;
+    color: #00a170;
+  }
+  .btn {
+    display: block;
+  }
+}
